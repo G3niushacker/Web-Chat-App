@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Chat</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            .main{
+                width: 300px;
+                height: 550px;
+                border: 10px solid #333;
+                border-radius: 40px;
+                box-shadow: 5px 5px 5px 5px grey;
+            }
+            .main1{
+                width: 300px;
+                height: 550px;
+                border: 10px solid #333;
+                border-radius: 40px;
+                box-shadow: 5px 5px 5px 5px grey;
+            }
+            .iner{
+                height: 540px;
+                border-radius: 29px;
+                border: 5px solid black;
+            }
+            .uperdshd{
+                height: 20px;
+                background-color: black;
+                margin-left: 50px;
+                margin-right: 50px;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+            #img{
+                margin-left: 70px;
+                margin-right: 50px;
+            }
+            body{
+                margin-left: 10%;
+                margin-top: 50px;
+            }
+            h1{
+                margin-left:200px ;
+            }
+            .chatbox{
+                margin-left: 10px;
+            }
+
+            .sndbtn{
+                height: 25px;
+                border: none;
+                background-color: white;
+                outline: none;
+            }
+            .chat{
+                font-size: 25px;
+                width: 220px;
+            }
+            .btmlne{
+                height: 3px;
+                width: 100px;
+                background-color: black;
+                margin-top: 10px;
+                margin-left: 100px;
+            }
+           #p1{
+               text-align: right;
+               margin-right: 10px;
+           }
+           #p2{
+               text-align: left;
+               margin-left: 10px;
+           }
+           #p4{
+               text-align: right;
+               margin-right: 10px;
+           }
+           #p3{
+               text-align: left;
+               margin-left: 10px;
+           }
+           .appbar{
+               height: 30px;
+           }
+           #imj{
+               margin-left: 10px;
+               height: 30px;
+               width: 30px;
+           }
+           #name{
+               font-weight: bold;
+               margin-left: 50px;
+           }
+           #more{
+               margin-left: 60px;
+           }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Simple Chat App
+        </h1>
+        <table>
+            <tr>
+                <td>
+                     <div class="main">
+                        <div class="iner">
+                            <div class="uperdshd">
+                                <img id="img" src="cam.png" alt="IMAGE">
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>
+                                      <img id="imj" src="profile2.png" alt="IMAGE">
+                                    </td>
+                                    <td>
+                                      <p id="name">Linda Pam</p>
+                                    </td>
+                                    <td><span class="material-icons" id="more">
+                                        more_horiz
+                                        </span></td>
+                                </tr>
+                            </table>
+                                <p id="p1"></p>
+                                <p id="p3"></p>
+                                <p id="p5"></p>
+                                <p id="p7"></p>
+                                <p id="p9"></p>
+                                <p id="p11"></p>
+                            <div class="chatbox">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <input type="text" id="chat1" class="chat" placeholder="Enter Message">
+                                            <button class="sndbtn" onclick="send1()"> <span class="material-icons">send</span></button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                                <div class="btmlne"></div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main1">
+                       <div class="iner">
+                           <div class="uperdshd">
+                               <img id="img" src="cam.png" alt="IMAGE">
+                           </div>                
+                              <table>
+                                  <tr>
+                                      <td>
+                                        <img id="imj" src="profile1.png" alt="IMAGE">
+                                      </td>
+                                      <td>
+                                        <p id="name">Jack Marcho</p>
+                                      </td>
+                                      <td>
+                                        <span class="material-icons" id="more">
+                                            more_horiz
+                                            </span>
+                                      </td>
+                                  </tr>
+                              </table>
+                            <p id="p2"></p>         
+                            <p id="p4"></p>
+                            <p id="p6"></p>         
+                            <p id="p8"></p>
+                            <p id="p10"></p>         
+                            <p id="p12"></p>
+                           <div class="chatbox">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="chat2" class="chat" placeholder="Enter Message">
+                                        <button class="sndbtn" onclick="send2()"> <span class="material-icons">send</span></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                            <div class="btmlne"></div>
+                       </div>
+                   </div>
+               </td>
+            </tr>
+        </table>
+
+        <script type="text/javascript">
+        function send1(){
+            var msg1 = document.getElementById('chat1').value;
+            var msglst1 = [];
+            msglst1.push(msg1);
+            document.getElementById('p1').innerHTML= msglst1[0];
+            document.getElementById('p2').innerHTML= msglst1[0];
+            document.getElementById('chat1').value = '';
+        }
+        function send2(){
+            var msg2 = document.getElementById('chat2').value;
+            var msglst2 = [];
+            msglst2.push(msg2)
+            document.getElementById('p3').innerHTML= msglst2[0];
+            document.getElementById('p4').innerHTML= msglst2[0];
+            document.getElementById('chat2').value = '';
+        }
+        </script>
+    </body>
+</html>
